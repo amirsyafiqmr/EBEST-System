@@ -1,0 +1,71 @@
+@extends('layout')
+
+@section('content')
+
+    {{--    @auth--}}
+
+    <section id="main-content">
+        <section class="wrapper">
+            <!--div class="center">
+              <!--div class="col-lg-9 main-chart">
+                <!--CUSTOM CHART START -->
+            <div class="border-head">
+                <center><h1><b>MADETILL EVENT MANAGEMENT EQUIPMENT</b></h1></center>
+            </div>
+            <br>
+            <div class="header-ebest">
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="border-head">
+            </div>
+
+            <!--div class="row mt">
+        <!-- RECENT BOOKING START HERE -->
+            <h3><i class="fa fa-angle-right"></i> List Of Equipment You Can Book</h3>
+            <!--div class="row mb">
+              <!-- page start-->
+            <div class="content-panel">
+                <div class="adv-table">
+                    <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
+                        <thead>
+                        <tr>
+                            <th class="hidden-phone"> </th>
+                            <th class="hidden-phone">Equipment Name</th>
+                            <th class="hidden-phone">Equipment Type</th>
+                            <th class="hidden-phone">Equipment Price Per Unit</th>
+                            <th class="hidden-phone">Equipment Quantity in Stock</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($equips as $equip)
+                            <tr class="gradeC">
+                                <td class="hidden-phone"><img src="{{ URL::to('/') }}/images/{{ $equip->image }}" class="img-thumbnail" width="100" /></td>
+                                <td class="hidden-phone">{{ $equip->equipName }}</td>
+                                <td class="hidden-phone">{{ $equip->equipType }}</td>
+                                <td class="hidden-phone">RM {{ $equip->equipPrice }}</td>
+                                <td class="hidden-phone">{{ $equip->equipQuantity }}</td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /col-lg-9 END SECTION MIDDLE -->
+            <!--
+            </col-lg-3 -->
+        </section>
+    </section>
+    <!--main content end-->
+    <!--footer start-->
+    {{--    @else--}}
+    {{--        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
+    {{--            @csrf--}}
+    {{--        </form>--}}
+    {{--    @endauth--}}
+
+@endsection
+
