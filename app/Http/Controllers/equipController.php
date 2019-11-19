@@ -72,37 +72,7 @@ class equipController extends Controller
             'image' => $new_name
 
         ]);
-        return redirect('/view/equipment');
-
-//        $image = $request-&gt;file('image');
-//        $input['imagename'] = time().'.'.$image-&gt;getClientOriginalExtension();
-//
-//            $destinationPath = public_path('/thumbnail');
-//            $img = Image::make($image-&gt;getRealPath());
-//            $img-&gt;resize(100, 100, function ($constraint) {
-//            $constraint-&gt;aspectRatio();
-//                })-&gt;save($destinationPath.'/'.$input['imagename']);
-//
-//            $destinationPath = public_path('/images');
-//             $image-&gt;move($destinationPath, $input['imagename']);
-//
-//             $this-&gt;postImage-&gt;add($input);
-//
-//            return back()
-//            -&gt;with('success','Image Upload successful')
-//            -&gt;with('imageName',$input['imagename']);
-//        if($request->hasFile('image')){
-//            $image_tmp = Input::file('image');
-//              if($image_tmp->isValid()){
-//
-//                $extension = $image_tmp->getClientOriginalExtension();
-//             $filename = rand(111,99999). '.' .$extension;
-//                $image_path ='image/'.$filename;
-//                Image::make($image_tmp)->save($image_path);
-//
-//            $input->image = $filename;
-//              }}
-        //return redirect('/staffMain');
+        return redirect('/view/equipment')->with('success', $equipment->equipName. ' Has Successfully Create!');
     }
 
     /**
@@ -113,7 +83,7 @@ class equipController extends Controller
      */
     public function show()
     {
-        return view('equipment.view')->with('equips', Equipment::all());
+        return view('equipment.view')->with('equips', Equipment::paginate(4));
     }
 
     /**
@@ -157,14 +127,14 @@ class equipController extends Controller
                 'staff_id' => Auth::guard('staff')->user()->staff_id,
             ]);
 
-            return redirect('/view/equipment');
+            return redirect('/view/equipment')->with('success','Equipment ' .$equipment->equipName.  ' Has Successfully Update!');
             //return redirect('/update/equipment/'.$id);
             //Session::flash('update_profile','Update profile successfully');
 
         } else {
 
             //return redirect('/update/equipment/' . $id);
-            return redirect('/view/equipment');
+            return redirect('/view/equipment')->with('success','Equipment ' .$equipment->equipName.  ' Has Successfully Update!');
 
         }
     }
@@ -185,11 +155,11 @@ class equipController extends Controller
 
                     //Session::flash('complaint_deleted', 'The complaint has been deleted');
 
-                    return redirect('/view/equipment');
+                    return redirect('/view/equipment')->with('success',"The Equipment Has Successfully Delete!");
 
                 } else {
 
-                    return redirect('/view/equipment');
+                    return redirect('/view/equipment')->with('success',"The Equipment Has Successfully Delete!");
 
                 }
     }

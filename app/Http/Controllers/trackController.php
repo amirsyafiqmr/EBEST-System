@@ -25,7 +25,7 @@ class trackController extends Controller
 //
 //        return view('tracking.staffView', compact('customer', 'booking'));
 
-        return view('tracking.staffView')->with('details', Booking::all());
+        return view('tracking.staffView')->with('details', Booking::paginate(5));
     }
 
     /**
@@ -61,7 +61,7 @@ class trackController extends Controller
             'book_id' => $id,
 
         ]);
-        return redirect('/staffView/tracking');
+        return redirect('/staffView/tracking')->with('success','The Customer Tracking Number ' .$tracking->book_id. ' Has Successfully Create!');
     }
 
     /**
@@ -113,14 +113,14 @@ class trackController extends Controller
                 'book_id' => $id,
             ]);
 
-            return redirect('/update/tracking/'. $id);
+            return redirect('/update/tracking/'. $id)->with('success','The Customer Tracking Number ' .$tracking->book_id. ' Has Successfully Update!');
             //return redirect('/update/equipment/'.$id);
             //Session::flash('update_profile','Update profile successfully');
 
         } else {
 
             //return redirect('/update/equipment/' . $id);
-            return redirect('/update/tracking/'. $id);
+            return redirect('/update/tracking/'. $id)->with('success','The Customer Tracking Number ' .$tracking->book_id. ' Has Successfully Update!');
 
         }
     }

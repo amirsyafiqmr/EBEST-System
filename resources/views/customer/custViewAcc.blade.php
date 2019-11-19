@@ -1,21 +1,31 @@
 @extends('layout')
 
+
+
 @section('content')
+
     <!-- **********************************************************************************************************************************************************
         MAIN CONTENT
 *********************************************************************************************************************************************************** -->
     <!--main content start-->
     <section id="main-content">
         <section class="wrapper site-min-height">
+
+
+
             <div class="border-head">
                 <center><h1><b>CUSTOMER ACCOUNT</b></h1><div></div></center>
                     </div>
+
+            @include('messages')
             <div class="row">
                 <div class="col-lg-12">
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 
                     </div>
                     <!-- end col-4 -->
+
+
 
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         <div class="custom-box">

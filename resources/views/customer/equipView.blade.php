@@ -51,6 +51,7 @@
                         @endforeach
                         </tbody>
                     </table>
+                    {{$equips->links()}}
                 </div>
                 <!-- /row -->
             </div>

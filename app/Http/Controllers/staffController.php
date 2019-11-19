@@ -96,7 +96,7 @@ class staffController extends Controller
 
                 //Session::flash('update_profile','Update profile successfully');
 
-                return redirect('/staffViewAcc/'.$id);
+                return redirect('/staffViewAcc/'.$id)->with('success',"Your Account Has Successfully Update!");
 
             } else {
 
@@ -111,13 +111,13 @@ class staffController extends Controller
 
                 // Session::flash('update_profile','Update profile successfully');
 
-                return redirect('/staffViewAcc/'.$id);
+                return redirect('/staffViewAcc/'.$id)->with('success',"Your Account Has Successfully Update!");
 
             }
 
 
         } else {
-            return redirect('/staffViewAcc/'.$id);
+            return redirect('/staffViewAcc/'.$id)->with('success',"Your Account Has Not Successfully Update!");
         }
     }
 

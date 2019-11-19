@@ -17,6 +17,7 @@
             </div>
             <!-- BASIC FORM ELELEMNTS -->
             <div class="col-lg-12">
+                @include('messages')
                 <div class="form-panel">
                     <h4 class="mb"><i class="fa fa-angle-right"></i> Enter details here to update the customer tracking</h4>
                     <div class="header-ebest">

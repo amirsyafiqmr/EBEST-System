@@ -7,6 +7,7 @@
 
             <h3><i class="fa fa-angle-right"></i> List Of Equipment</h3>
             <div class="row top-15">
+                @include('messages')
                 <div class="row">
                     <div class="col-lg-12 ">
                         @foreach($products as $product)

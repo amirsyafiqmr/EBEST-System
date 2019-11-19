@@ -1,4 +1,7 @@
-@extends('layout')  @section('content')
+@extends('layout')
+
+@section('content')
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
@@ -8,6 +11,7 @@
         <section class="wrapper">
             <div class="col-lg-12">
                 <div class="form-panel">
+                    @include('messages')
                 <div class="row top-15">
                     <div class="col-md-4 order-md-2 mb-4">
                         <h4 class="d-flex justify-content-between align-items-center mb-3">

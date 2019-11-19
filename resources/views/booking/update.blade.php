@@ -14,8 +14,11 @@
             <div class="border-head">
                 <center><h1><b>UPDATE BOOKING FORM</b></h1></center>
             </div>
+
+
             <!-- BASIC FORM ELELEMNTS -->
             <div class="col-lg-12">
+                @include('messages')
                 <div class="form-panel">
                     <h4 class="mb"><i class="fa fa-angle-right"></i> Enter details here! for update your booking</h4>
                     <form method="post" action="{{ route('bookUpdate', $bookings->book_id) }}" class="form-horizontal style-form"

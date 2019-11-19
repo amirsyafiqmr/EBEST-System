@@ -27,6 +27,7 @@
                 <h3><i class="fa fa-angle-right"></i> List Of Equipment</h3>
                 <!--div class="row mb">
                   <!-- page start-->
+                @include('messages')
                 <div class="content-panel">
                     <div class="adv-table">
                         <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
@@ -73,6 +74,7 @@
                             @endforeach
                             </tbody>
                         </table>
+                        {{$equips->links()}}
                     </div>
                     <!-- /row -->
                 </div>

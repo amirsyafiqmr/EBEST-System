@@ -63,7 +63,7 @@ class custController extends Controller
      */
     public function show()
     {
-       return view('customer.equipView')->with('equips', Equipment::all());
+       return view('customer.equipView')->with('equips', Equipment::paginate(4));
     }
 
     /**
@@ -103,7 +103,7 @@ class custController extends Controller
 
                 //Session::flash('update_profile','Update profile successfully');
 
-                return redirect('/custViewAcc/'.$id);
+                return redirect('/custViewAcc/'.$id)->with('success',"Your Account Has Successfully Update!");
 
             } else {
 
@@ -116,15 +116,15 @@ class custController extends Controller
                     'companyAddress'=>$input['companyAddress'], 'companyPhoneNo'=>$input['companyPhoneNo'],
                     'companyEmail'=>$input['companyEmail'], 'password'=>$input['password']]);
 
-               // Session::flash('update_profile','Update profile successfully');
+               //Session::flash('update_profile','Update profile successfully');
 
-                return redirect('/custViewAcc/'.$id);
+                return redirect('/custViewAcc/'.$id)->with('success',"Your Account Has Successfully Update!");
 
             }
 
 
         } else {
-            return redirect('/custViewAcc/'.$id);
+            return redirect('/custViewAcc/'.$id)->with('success',"Your Account Has Not Successfully Update!");
         }
 
     }

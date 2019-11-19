@@ -11,6 +11,7 @@
                 <center><h1><b>STAFF ACCOUNT</b></h1><div></div></center>
             </div>
             <div class="row">
+                @include('messages')
                 <div class="col-lg-12">
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 

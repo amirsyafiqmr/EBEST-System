@@ -35,7 +35,7 @@ class bookController extends Controller
 
         \Cart::add($product->equip_id, $product->equipName, $product->equipPrice, $request->quantity, array());
 
-        return back()->with('success', $product->equipName. ' has successfully beed added to the shopping list!');
+        return back()->with('success', $product->equipName. ' has successfully beed added to the booking list!');
     }
 
     public function cart(){
@@ -49,7 +49,7 @@ class bookController extends Controller
     public function clear(){
         \Cart::clear();
 
-        return back()->with('success',"The shopping cart has successfully beed added to the shopping cart!");
+        return back()->with('success',"The list equipment has successfully clear from the booking list!");
     }
 
     /**
@@ -83,7 +83,7 @@ class bookController extends Controller
     public function detail()
     {
 
-        return view('booking.staffView')->with('books', Booking::all());
+        return view('booking.staffView')->with('books', Booking::paginate(5));
     }
 
     public function detailView($id)
@@ -158,14 +158,14 @@ class bookController extends Controller
                 'organizerPno' => $input['organizerPno']
             ]);
 
-            return redirect('/update/booking/'. $id);
+            return redirect('/update/booking/'. $id)->with('success',"Your booking information has successfully update!");
             //return redirect('/update/equipment/'.$id);
             //Session::flash('update_profile','Update profile successfully');
 
         } else {
 
             //return redirect('/update/equipment/' . $id);
-            return redirect('/update/booking/'. $id);
+            return redirect('/update/booking/'. $id)->with('success',"Your booking information has successfully update!");
 
         }
     }
