@@ -44,7 +44,7 @@
                         @foreach($details as $detail)
                             <tr class="gradeC">
                                 <td class="hidden-phone">{{ $detail->book_id }}</td>
-                                <td class="hidden-phone">{{ $detail->cust_id }}</td>
+                                <td class="hidden-phone">{{ $detail->customer->name }}</td>
                                 <td class="hidden-phone">{{ $detail->eventDate }}</td>
                                 <td class="hidden-phone">{{ $detail->venue }}</td>
                                 <td class="hidden-phone">

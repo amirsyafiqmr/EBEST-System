@@ -43,9 +43,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('staffLogin') }}">{{ __('Staff Login') }}</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('customerLogin') }}">{{ __('Customer Login') }}</a>
-                            </li>
+{{--                            <li class="nav-item">--}}
+{{--                                <a class="nav-link" href="{{ route('customerLogin') }}">{{ __('Customer Login') }}</a>--}}
+{{--                            </li>--}}
 {{--                            <li class="nav-item">--}}
 {{--                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>--}}
 {{--                            </li>--}}

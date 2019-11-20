@@ -8,9 +8,11 @@ class Payment extends Model
 {
     protected $primaryKey = 'paymentID';
 
+    protected $table = 'payment';
+
     protected $fillable = [
 
-        'paymentID', 'totalPrice', 'book_id'
+        'paymentID', 'amount', 'billplz_id', 'url', 'book_id'
 
     ];
 }

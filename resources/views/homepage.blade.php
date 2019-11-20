@@ -177,7 +177,7 @@
                     <span class="icon"><i class="icon-wallet2"></i></span>
                     <h3>Download Price List</h3>
                     <p>Let's know our price</p>
-                    <a href="" class="btn btn-primary">Download Here!</a>
+                    <a href="http://www.madetillevent.com.my/pricelist.pdf" class="btn btn-primary">Download Here!</a>
                 </div>
             </div>
         </div>
@@ -224,73 +224,73 @@
                         <div class="owl-carousel owl-carousel-fullwidth">
                             <div class="item">
                                 <div class="blog-slide active">
-                                    <a href="" class="blog-box" style="background-image: url(med/images/M11.png);"></a>
+                                    <a class="blog-box" style="background-image: url(med/images/M11.png);"></a>
                                     <div class="desc">
-                                        <h3><a href=""><center>Serving Dome</center></a></h3>
+                                        <h3><center>Serving Dome</center></h3>
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="blog-slide active">
-                                    <a href="" class="blog-box" style="background-image: url(med/images/M8.png);"></a>
+                                    <a class="blog-box" style="background-image: url(med/images/M8.png);"></a>
                                     <div class="desc">
-                                        <h3><a href=""><center>Buffet Accessories</center></a></h3>
+                                        <h3><center>Buffet Accessories</center></h3>
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="blog-slide active">
-                                    <a href="" class="blog-box" style="background-image: url(med/images/M5.png);"></a>
+                                    <a class="blog-box" style="background-image: url(med/images/M5.png);"></a>
                                     <div class="desc">
-                                        <h3><a href=""><center>Glassware</center></a></h3>
+                                        <h3><center>Glassware</center></h3>
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="blog-slide active">
-                                    <a href="" class="blog-box" style="background-image: url(med/images/M9.png);"></a>
+                                    <a class="blog-box" style="background-image: url(med/images/M9.png);"></a>
                                     <div class="desc">
-                                        <h3><a href=""><center>Melamine</center></a></h3>
+                                        <h3><center>Melamine</center></h3>
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="blog-slide active">
-                                    <a href="" class="blog-box" style="background-image: url(med/images/M7.png);"></a>
+                                    <a class="blog-box" style="background-image: url(med/images/M7.png);"></a>
                                     <div class="desc">
-                                        <h3><a href=""><center>Chinawares Porcelain</center></a></h3>
+                                        <h3><center>Chinawares Porcelain</center></h3>
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="blog-slide active">
-                                    <a href="" class="blog-box" style="background-image: url(med/images/M14.png);"></a>
+                                    <a class="blog-box" style="background-image: url(med/images/M14.png);"></a>
                                     <div class="desc">
-                                        <h3><a href=""><center>VVIP Tableware</center></a></h3>
+                                        <h3><center>VVIP Tableware</center></h3>
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="blog-slide active">
-                                    <a href="" class="blog-box" style="background-image: url(med/images/M6.png);"></a>
+                                    <a class="blog-box" style="background-image: url(med/images/M6.png);"></a>
                                     <div class="desc">
-                                        <h3><a href=""><center>Variety of Cutleries</center></a></h3>
+                                        <h3><center>Variety of Cutleries</center></h3>
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="blog-slide active">
-                                    <a href="" class="blog-box" style="background-image: url(med/images/M10.png);"></a>
+                                    <a class="blog-box" style="background-image: url(med/images/M10.png);"></a>
                                     <div class="desc">
-                                        <h3><a href=""><center>Banquet Linen</center></a></h3>
+                                        <h3><center>Banquet Linen</center></h3>
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
                                 <div class="blog-slide active">
-                                    <a href="" class="blog-box" style="background-image: url(med/images/M15.png);"></a>
+                                    <a class="blog-box" style="background-image: url(med/images/M15.png);"></a>
                                     <div class="desc">
-                                        <h3><a href=""><center>Other Rentals</center></a></h3>
+                                        <h3><center>Other Rentals</center></h3>
                                     </div>
                                 </div>
                             </div>

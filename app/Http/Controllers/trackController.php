@@ -18,13 +18,6 @@ class trackController extends Controller
      */
     public function index()
     {
-
-//        $customer = Customer::where('cust_id')->first();
-//
-//        $booking = Booking::where('cust_id', $customer)->get();
-//
-//        return view('tracking.staffView', compact('customer', 'booking'));
-
         return view('tracking.staffView')->with('details', Booking::paginate(5));
     }
 

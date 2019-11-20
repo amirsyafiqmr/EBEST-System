@@ -68,6 +68,14 @@
                                             <div class="pull-right"> COD </div>
                                             <div class="clearfix"></div>
                                         </div>
+                                        <br>
+
+                                        <div>
+                                            <!-- /col-md-3 -->
+                                            <div class="pull-left"> DEPOSIT : </div>
+                                            <div class="pull-right"> <strong>{{$booking->status}}</strong></div>
+                                            <div class="clearfix"></div>
+                                        </div>
                                         <!-- /row -->
                                         <br>
                                         <div class="well well-small green">

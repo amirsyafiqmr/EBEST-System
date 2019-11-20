@@ -58,7 +58,7 @@
                                     </div>
                                     <div>
                                         <div class="pull-left"> DO NO : </div>
-                                        <div class="pull-right"> {{ $booking->book_id }}  </div>
+                                        <div class="pull-right"><b>{{ $booking->book_id }} </b></div>
                                         <div class="clearfix"></div>
                                     </div>
                                     <div>
@@ -66,6 +66,14 @@
                                             <!-- /col-md-3 -->
                                             <div class="pull-left"> TERMS : </div>
                                             <div class="pull-right"> COD </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <br>
+
+                                        <div>
+                                            <!-- /col-md-3 -->
+                                            <div class="pull-left"> DEPOSIT : </div>
+                                            <div class="pull-right"> <strong>{{$booking->status}}</strong></div>
                                             <div class="clearfix"></div>
                                         </div>
                                         <!-- /row -->
@@ -132,7 +140,16 @@
                                     <a href="{{route('viewBooking', $booking->cust_id)}}" class="btn btn-round btn-warning">
                                         Back
                                     </a>
-                                    <a href=" " class="btn btn-round btn-primary">
+                                    <a href="#" onclick="event.preventDefault();
+                                        document.getElementById('newbill-form').submit();"
+                                       class="btn btn-round btn-success">
+                                        Pay
+                                    </a>
+                                    <form id="newbill-form" action="{{ route('book.payment', $booking->book_id) }}" method="POST" style="display: none;">
+                                        @csrf
+                                        <input type="hidden" name="book_id" value="{{ $booking->book_id }}">
+                                    </form>
+                                    <a href="" class="btn btn-round btn-primary">
                                         Print
                                     </a></center>
                             </div>

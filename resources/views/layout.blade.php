@@ -124,12 +124,12 @@
                         <span>Equipment For Rental</span>
                     </a>
                 </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-money"></i>
-                        <span>Payment</span>
-                    </a>
-                </li>
+{{--                <li class="sub-menu">--}}
+{{--                    <a href="javascript:;">--}}
+{{--                        <i class="fa fa-money"></i>--}}
+{{--                        <span>Payment</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
                 <li class="sub-menu">
                     <a href="/view/tracking">
                         <i class="fa fa-truck"></i>
@@ -162,21 +162,10 @@
 @yield('content')
 
 </section>
+<br><br>
 <!--main content end-->
 <!--footer start-->
-<footer class="site-footer">
-    <div class="text-center">
-        <p>
-            &copy; Copyrights <strong>Madetill Event Management Sdn. Bhd.</strong>. All Rights Reserved
-        </p>
-        <div class="credits">
-            mem@madetillevent.com.my</div>
-        <a href="custMain.html" class="go-top">
-            <i class="fa fa-angle-up"></i>
-        </a>
-    </div>
-</footer>
-<!--footer end-->
+
 
 <!-- js placed at the end of the document so the pages load faster -->
 <script src="../../temp1/lib/jquery/jquery.min.js"></script>

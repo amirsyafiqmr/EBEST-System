@@ -46,11 +46,15 @@ Route::post('/login/customer', 'Auth\LoginController@customerLogin')->name('logi
 
 //Register User
 
-Route::get('/register/staff', 'Auth\RegisterController@showStaffRegisterForm')->name('staffRegister');
+//Route::get('/register/staff', 'Auth\RegisterController@showStaffRegisterForm')->name('staffRegister'); Buka bila migrate refresh database
+//
+//Route::post('/register/staff', 'Auth\RegisterController@createStaff'); Buka bila migrate refresh database
+
+Route::get('/register/staff', 'staffController@showStaffRegisterForm')->name('staffRegister');
+
+Route::post('/register/staff', 'staffController@createStaff')->name('createStaffs');
 
 Route::get('/register/customer', 'Auth\RegisterController@showCustomerRegisterForm')->name('customerRegister');
-
-Route::post('/register/staff', 'Auth\RegisterController@createStaff');
 
 Route::post('/register/customer', 'Auth\RegisterController@createCustomer')->name('registerOnCustomer');
 
@@ -135,6 +139,10 @@ Route::get('/update/booking/{id}', 'bookController@updateBooking')->name('update
 Route::patch('/update/bookingAcc/{id}', 'bookController@update')->name('bookUpdate');
 
 Route::get('/invoice/booking/{id}', 'bookController@show')->name('book.invoice')->middleware('auth:customer');
+
+Route::post('/invoice/payment/{id}', 'bookController@payment')->name('book.payment')->middleware('auth:customer'); // payment post
+
+Route::get('/invoice/redirect', 'bookController@redirectPayment')->name('book.redirect')->middleware('auth:customer'); // payment post
 
 Route::get('/staffView/booking', 'bookController@detail')->name('detailBook');
 

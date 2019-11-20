@@ -27,6 +27,36 @@ class staffController extends Controller
         return view('staff.staffViewAcc', compact('staffa'));
     }
 
+    public function showStaffRegisterForm()
+    {
+        return view('staff.register');
+    }
+
+    protected function createStaff(Request $request)
+    {
+        $input = $request->validate([
+            'staffId' => 'required',
+            'name' => 'required',
+            'address' => 'required',
+            'phoneNo' => 'required|numeric',
+            'designation' => 'required',
+            'email' => 'required|unique:staff,staffEmail',
+            'password' => 'required|confirmed',
+        ]);
+
+        $staff = Staff::create([
+            'staff_id' => $input['staffId'],
+            'staffName' => $input['name'],
+            'staffAddress' => $input['address'],
+            'staffPhoneNo' => $input['phoneNo'],
+            'staffDesignation' => $input['designation'],
+            'staffEmail' => $input['email'],
+            'password' => Hash::make($input['password']),
+        ]);
+
+        return redirect('/register/staff')->with('success',"Staff Account Has Successfully Create!");;
+    }
+
     /**
      * Show the form for creating a new resource.
      *

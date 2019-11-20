@@ -80,8 +80,8 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col col-md-3">Select Equipment Image</label>
-                            <div class="col-12 col-md-9">
+                            <label class="col-sm-2 col-sm-2 control-label">Select Equipment Image</label>
+                            <div class="col-sm-10">
                                 <input type="file" name="image" class="form-control @error('image') is-invalid @enderror" value="{{ old('image') }}">
                             </div>
                         </div>

@@ -135,9 +135,17 @@
                                     <a href="{{route('cart.checkout')}}" class="btn btn-round btn-warning">
                                         Back
                                     </a>
-                                    <a href="/custInvoice" class="btn btn-round btn-success">
+                                    <a href="#" onclick="event.preventDefault();
+                                        document.getElementById('newbill-form').submit();"
+                                        class="btn btn-round btn-success">
                                         Pay
-                                    </a></center>
+                                    </a>
+                                    <form id="newbill-form" action="{{ route('book.payment', $booking->book_id) }}" method="POST" style="display: none;">
+                                        @csrf
+                                        <input type="hidden" name="book_id" value="{{ $booking->book_id }}">
+                                    </form>
+
+                                </center>
                             </div>
                         </div>
                     </div>

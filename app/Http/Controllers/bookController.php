@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Customer;
+use App\Payment;
+use Billplz\Client;
+use Billplz\Response;
 use DB;
 use App\Booking;
 use App\Equipment;
@@ -104,6 +107,89 @@ class bookController extends Controller
         $equipment_customers = EquipmentCustomer::where('book_id', $booking->book_id)->get();
 
         return view('booking.invoice', compact('booking', 'equipment_customers'));
+
+    }
+
+    public function payment(Request $request, $id) {
+
+        $booking = Booking::where('book_id', $id)->first();
+
+        // Connect API
+        $billplz = Client::make('b9b1060f-3c22-4318-97f6-27adc9a824bc', 'S-wQz3zVsLyv2BmV3OrkYyBg');
+
+        // Use sandbox environment
+        $billplz->useSandbox();
+
+        // Use version v3
+        $billplz->useVersion('v3');
+
+        // Guna bill
+        $bill = $billplz->bill();
+
+        $response = $bill->create(
+            'jdjgrcgz',
+            Auth::user()->email,
+            null,
+            Auth::user()->name,
+            \Duit\MYR::given(200*100),
+            ['callback_url' => 'http://example.com/webhook/', 'redirect_url' => 'http://ebest.test/invoice/redirect'],
+            'Apple'
+        );
+
+        $bplz_result = $response->toArray();
+        // return dd($bplz_result);
+
+         //Store the bill into our purchases
+        $purchase = new Payment;
+        $purchase->book_id = $booking->book_id;
+        $purchase->amount = $booking->totalPrice;
+        $purchase->billplz_id = $bplz_result['id'];
+        $purchase->url = $bplz_result['url'];
+        $purchase->save();
+
+        $unpaidStatus = "UNPAID";
+
+        $booking->update(['status' => $unpaidStatus]);
+
+        return redirect($bplz_result['url']);
+
+
+    }
+
+    public function redirectPayment() {
+
+        // Connect API
+        $billplz = Client::make('b9b1060f-3c22-4318-97f6-27adc9a824bc', 'S-wQz3zVsLyv2BmV3OrkYyBg');
+
+        // Use sandbox environment
+        $billplz->useSandbox();
+
+        // Use version v3
+        $billplz->useVersion('v3');
+
+        // Guna bill
+        $bill = $billplz->bill();
+
+        $data = $bill->redirect($_GET);
+
+//        return dd($data);
+
+        if ($data['paid'] == "true") {
+
+            $updatePayment = "PAID";
+
+            $payment = Payment::whereBillplz_id($data['id'])->first();
+
+            $booking = Booking::where('book_id', $payment->book_id)->first();
+
+//            $booking->update(['status' => $data['paid']]);
+
+            $booking->update(['status' => $updatePayment]);
+
+            return redirect('/view/booking');
+
+        }
+
 
     }
 

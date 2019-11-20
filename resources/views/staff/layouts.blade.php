@@ -94,12 +94,7 @@
                         <span>Home</span>
                     </a>
                 </li>
-                <li class="sub-menu">
-                    <a href="/staffView/booking">
-                        <i class="fa fa-shopping-cart"></i>
-                        <span>Booking</span>
-                    </a>
-                </li>
+
                 <li class="sub-menu">
                     <a href="equipment.php">
                         <i class="fa fa-list-ol"></i>
@@ -110,6 +105,14 @@
                         <li><a href="{{route('equipView') }}" class="nav-link {{ (request()->is('view/equipment')) ? 'active show-sub' : '' }}">Manage Equipment</a></li>
                     </ul>
                 </li>
+
+                <li class="sub-menu">
+                    <a href="/staffView/booking">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span>Booking</span>
+                    </a>
+                </li>
+
                 <li class="sub-menu">
                     <a href="/staffView/tracking">
                         <i class="fa fa-truck"></i>
@@ -119,6 +122,12 @@
 {{--                        <li><a href="/trackForm">Create Tracking</a></li>--}}
 {{--                        <li><a href="/trackUpdate">Update Tracking</a></li>--}}
 {{--                    </ul>--}}
+                </li>
+                <li class="sub-menu">
+                    <a href="{{ route('staffRegister') }}">
+                        <i class="fa fa-user"></i>
+                        <span>Staff</span>
+                    </a>
                 </li>
                 <li class="sub-menu">
                     <a href="{{ route('staffView', Auth::guard('staff')->user()->staff_id) }}" class="nav-link {{ (request()->is('staffViewAcc/*')) ? 'active show-sub' : '' }}">

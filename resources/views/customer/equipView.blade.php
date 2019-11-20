@@ -62,11 +62,18 @@
     </section>
     <!--main content end-->
     <!--footer start-->
-    {{--    @else--}}
-    {{--        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
-    {{--            @csrf--}}
-    {{--        </form>--}}
-    {{--    @endauth--}}
-
+    <br><br><br><br><br>
+    <footer class="site-footer">
+        <div class="text-center">
+            <p>
+                &copy; Copyrights <strong>Madetill Event Management Sdn. Bhd.</strong>. All Rights Reserved
+            </p>
+            <div class="credits">
+                mem@madetillevent.com.my</div>
+            <a href="custMain.html" class="go-top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+        </div>
+    </footer>
 @endsection
 

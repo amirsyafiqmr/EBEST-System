@@ -45,7 +45,7 @@
                         @foreach($books->reverse() as $book)
                             <tr class="gradeC">
                                 <td class="hidden-phone">{{ $book->book_id }}</td>
-                                <td class="hidden-phone">{{ $book->cust_id }}</td>
+                                <td class="hidden-phone">{{ $book->customer->name }}</td>
                                 <td class="hidden-phone">{{ $book->eventDate }}</td>
                                 <td class="hidden-phone">{{ $book->venue }}</td>
                                 <td class="hidden-phone">{{ $book->deliveryDate }}</td>

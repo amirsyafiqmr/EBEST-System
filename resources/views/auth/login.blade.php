@@ -61,7 +61,7 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                <a class="btn btn-primary" href="{{ route('staffRegister') }}">{{ __('Staff Register') }}</a>
+{{--                                <a class="btn btn-primary" href="{{ route('staffRegister') }}">{{ __('Staff Register') }}</a> Buka bila migrate refresh database--}}
 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">

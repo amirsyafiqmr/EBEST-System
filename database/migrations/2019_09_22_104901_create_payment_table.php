@@ -15,9 +15,11 @@ class CreatePaymentTable extends Migration
     {
         Schema::create('payment', function (Blueprint $table) {
             $table->bigIncrements('paymentID')->index();
-            $table->string('totalPrice');
-            $table->string('receipt');
+            $table->string('amount');
+            $table->string('billplz_id');
+            $table->string('url');
             $table->bigInteger('book_id')->unsigned();
+            $table->timestamps();
 
             $table->foreign('book_id')->references('book_id')->on('booking');
         });

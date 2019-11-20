@@ -59,4 +59,17 @@
     <!-- /MAIN CONTENT -->
     <!--main content end-->
     <!--footer start-->
+    <br>
+    <footer class="site-footer">
+        <div class="text-center">
+            <p>
+                &copy; Copyrights <strong>Madetill Event Management Sdn. Bhd.</strong>. All Rights Reserved
+            </p>
+            <div class="credits">
+                mem@madetillevent.com.my</div>
+            <a href="custMain.html" class="go-top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+        </div>
+    </footer>
 @endsection

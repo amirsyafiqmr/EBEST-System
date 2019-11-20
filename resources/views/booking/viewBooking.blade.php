@@ -36,6 +36,7 @@
                             <th class="centered" >Total Price</th>
                             <th class="centered" >Delivery Date</th>
                             <th class="centered" >Collection Date</th>
+                            <th class="centered" >Status Payment Deposit</th>
                             <th class="centered" width="100"> </th>
                         </tr>
                         </thead>
@@ -48,6 +49,7 @@
                                 <td class="center">RM {{ $book->totalPrice }}</td>
                                 <td class="center">{{ $book->deliveryDate }}</td>
                                 <td class="center">{{ $book->collectDate }}</td>
+                                <td class="center">{{ $book->status }}</td>
                                 <td class="hidden-phone">
                                     <a class="btn btn-primary" href="{{ route('book.detail', $book->book_id) }}" class="nav-link {{ (request()->is('/detail/booking/*')) ? 'active show-sub' : '' }}">View</a>
                                     <a class="btn btn-success" href="{{ route('updateBooking', $book->book_id) }}" class="nav-link {{ (request()->is('/update/booking/*')) ? 'active show-sub' : '' }}">Update</a>
@@ -65,13 +67,21 @@
             </col-lg-3 -->
         </section>
     </section>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <!--main content end-->
     <!--footer start-->
-    {{--    @else--}}
-    {{--        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
-    {{--            @csrf--}}
-    {{--        </form>--}}
-    {{--    @endauth--}}
-
+    <footer class="site-footer">
+        <div class="text-center">
+            <p>
+                &copy; Copyrights <strong>Madetill Event Management Sdn. Bhd.</strong>. All Rights Reserved
+            </p>
+            <div class="credits">
+                mem@madetillevent.com.my</div>
+            <a href="custMain.html" class="go-top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+        </div>
+    </footer>
 @endsection
 

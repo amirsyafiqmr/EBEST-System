@@ -63,7 +63,7 @@ class custController extends Controller
      */
     public function show()
     {
-       return view('customer.equipView')->with('equips', Equipment::paginate(4));
+       return view('customer.equipView')->with('equips', Equipment::paginate(10));
     }
 
     /**

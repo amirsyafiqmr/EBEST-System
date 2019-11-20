@@ -78,6 +78,7 @@ class RegisterController extends Controller
     public function showStaffRegisterForm()
     {
         return view('auth.register', ['url' => 'staff']);
+//        return view('auth.register');
     }
 
     public function showCustomerRegisterForm()
@@ -109,6 +110,7 @@ class RegisterController extends Controller
         ]);
 
         return redirect()->intended('login/staff');
+
     }
 
     protected function createCustomer(Request $request)

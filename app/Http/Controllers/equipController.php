@@ -83,7 +83,7 @@ class equipController extends Controller
      */
     public function show()
     {
-        return view('equipment.view')->with('equips', Equipment::paginate(4));
+        return view('equipment.view')->with('equips', Equipment::paginate(10));
     }
 
     /**
