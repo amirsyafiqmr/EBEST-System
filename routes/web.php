@@ -154,6 +154,8 @@ Route::patch('/update/dateAcc/{id}', 'bookController@updateDate')->name('dateUpd
 
 Route::get('/detail/booking/{id}', 'bookController@detailBooking')->name('book.detail')->middleware('auth:customer');
 
+Route::delete('/delete/booking/{id}', 'bookController@destroy')->name('bookingDestroy');
+
 
 
 //Create, View and Manage Tracking
@@ -171,15 +173,4 @@ Route::get('/view/tracking', 'trackController@show')->name('viewTracking');
 
 Route::any('/search/tracking','trackController@search')->name('searchTrack');
 
-//Route::get ( '/', function () {
-//    return view ( 'tracking.search' );
-//} );
-//
-//Route::any ( '/search', function () {
-//    $q = Input::get ( 'q' );
-//    $user = Tracking::where ( 'book_id', 'LIKE', '%' . $q . '%' )->get ();
-//    if (count ( $user ) > 0)
-//        return view ( 'tracking.search' )->withDetails ( $user )->withQuery ( $q );
-//    else
-//        return view ( 'tracking.search' )->withMessage ( 'No Details found. Try to search again !' );
-//} );
+

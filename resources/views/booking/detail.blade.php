@@ -140,18 +140,21 @@
                                     <a href="{{route('viewBooking', $booking->cust_id)}}" class="btn btn-round btn-warning">
                                         Back
                                     </a>
-                                    <a href="#" onclick="event.preventDefault();
-                                        document.getElementById('newbill-form').submit();"
-                                       class="btn btn-round btn-success">
-                                        Pay
-                                    </a>
-                                    <form id="newbill-form" action="{{ route('book.payment', $booking->book_id) }}" method="POST" style="display: none;">
-                                        @csrf
-                                        <input type="hidden" name="book_id" value="{{ $booking->book_id }}">
-                                    </form>
                                     <a href="" class="btn btn-round btn-primary">
                                         Print
-                                    </a></center>
+                                    </a>
+                                    @if($booking->status == "UNPAID")
+                                        <a href="#" onclick="event.preventDefault();
+                                            document.getElementById('newbill-form').submit();"
+                                           class="btn btn-round btn-success">
+                                            Pay
+                                        </a>
+                                        <form id="newbill-form" action="{{ route('book.payment', $booking->book_id) }}" method="POST" style="display: none;">
+                                            @csrf
+                                            <input type="hidden" name="book_id" value="{{ $booking->book_id }}">
+                                        </form>
+                                    @endif
+                                </center>
                             </div>
                         </div>
                     </div>

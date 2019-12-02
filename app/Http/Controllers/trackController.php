@@ -18,7 +18,7 @@ class trackController extends Controller
      */
     public function index()
     {
-        return view('tracking.staffView')->with('details', Booking::paginate(5));
+        return view('tracking.staffView')->with('details', Booking::all());
     }
 
     /**
@@ -76,9 +76,16 @@ class trackController extends Controller
      */
     public function edit($id)
     {
-        $tracking = Tracking::where('book_id', $id)->first();
+        if ($tracking = Tracking::where('book_id', $id)->first()) {
 
-        return view('tracking.update', compact('tracking'));
+            return view('tracking.update', compact('tracking'));
+
+        } else {
+//            return "success";
+            $details = Booking::all();
+
+            return redirect('/staffView/tracking')->with([ '$details' => $details, 'notsuccess' => 'Record not found. Please create first!']);
+        }
     }
 
     /**
@@ -113,7 +120,7 @@ class trackController extends Controller
         } else {
 
             //return redirect('/update/equipment/' . $id);
-            return redirect('/update/tracking/'. $id)->with('success','The Customer Tracking Number ' .$tracking->book_id. ' Has Successfully Update!');
+            return redirect('/update/tracking/'. $id)->with('notsuccess','The Customer Tracking Number ' .$tracking->book_id. ' Has Not Successfully Update!');
 
         }
     }

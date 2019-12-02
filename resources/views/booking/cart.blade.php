@@ -64,7 +64,13 @@
                                 <div class="col-md-4">
                                     <input id="input" width="312" name="eventDate"  />
                                     <script>
-                                        $('#input').datetimepicker({ footer: true, modal: true });
+                                        $('#input').datetimepicker({ footer: true, modal: true,
+                                            datepicker: {
+                                                disableDates:  function (date) {
+                                                    const currentDate = new Date();
+                                                    return date > currentDate ? true : false;
+                                                }
+                                            }});
                                     </script>
                                 </div>
                             </div><br><br>

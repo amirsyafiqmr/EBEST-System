@@ -2,42 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fb70e66-286c-461c-89ae-f3ce61897dc1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/EBEST.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EBEST.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bd7ccefa-3756-42ed-9c50-6879e9222290.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bd7ccefa-3756-42ed-9c50-6879e9222290.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/bookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/bookController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/custController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/custController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/equipController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/equipController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/staffController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/staffController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/trackController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/trackController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_22_104901_create_payment_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_22_104901_create_payment_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/booking/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/cart.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/booking/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/detail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/booking/invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/invoice.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/booking/staffDetailView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/staffDetailView.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/booking/staffView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/staffView.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/booking/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/update.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/booking/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/view.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/booking/viewBooking.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/viewBooking.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/customer/custMain.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/custMain.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/customer/custTracking.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/custTracking.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/customer/custUpdateAcc.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/custUpdateAcc.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/customer/custViewAcc.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/custViewAcc.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/customer/equipView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/equipView.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/equipment/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/equipment/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/homepage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/homepage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/messages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/messages.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/staff/layouts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/staff/layouts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/staff/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/staff/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/tracking/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tracking/search.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/tracking/staffView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tracking/staffView.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tracking/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tracking/update.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,7 +65,7 @@
         <item name="MySQL - @localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="ebest: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="payment: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="staff: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -216,7 +197,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blogclass" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
@@ -321,7 +302,15 @@
       <workItem from="1574082827048" duration="17029000" />
       <workItem from="1574115163160" duration="9993000" />
       <workItem from="1574174717505" duration="8429000" />
-      <workItem from="1574209354680" duration="13689000" />
+      <workItem from="1574209354680" duration="14388000" />
+      <workItem from="1574321492534" duration="1481000" />
+      <workItem from="1574687654925" duration="599000" />
+      <workItem from="1574696130996" duration="4000" />
+      <workItem from="1574748563695" duration="1107000" />
+      <workItem from="1574750906124" duration="276000" />
+      <workItem from="1574774487080" duration="7680000" />
+      <workItem from="1575043615190" duration="41000" />
+      <workItem from="1575248453514" duration="23958000" />
     </task>
     <servers />
   </component>

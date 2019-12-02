@@ -23,7 +23,7 @@
             </div>
 
             <!--div class="row mt">
-        <!-- RECENT BOOKING START HERE -->
+        <!-- LIST BOOKING START HERE -->
             <h3><i class="fa fa-angle-right"></i> List Of Customer Booking</h3>
             <!--div class="row mb">
               <!-- page start-->
@@ -58,22 +58,10 @@
                         @endforeach
                         </tbody>
                     </table>
-                    {{$books->links()}}
                 </div>
-                <!-- /row -->
             </div>
-            <!-- /col-lg-9 END SECTION MIDDLE -->
-            <!--
-            </col-lg-3 -->
         </section>
     </section>
-    <!--main content end-->
-    <!--footer start-->
-    {{--    @else--}}
-    {{--        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
-    {{--            @csrf--}}
-    {{--        </form>--}}
-    {{--    @endauth--}}
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <!--footer start-->
@@ -82,14 +70,7 @@
             <p>
                 &copy; Copyrights <strong>Madetill Event Management Sdn. Bhd.</strong>. All Rights Reserved
             </p>
-            <div class="credits">
-                <!--
-      You are NOT allowed to delete the credit link to TemplateMag with free version.
-      You can delete the credit link only if you bought the pro version.
-      Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/dashio-bootstrap-admin-template/
-                  Licensing information: https://templatemag.com/license/
-                -->
-                mem@madetillevent.com.my</div>
+            <div class="credits">mem@madetillevent.com.my</div>
             <a href="#" class="go-top">
                 <i class="fa fa-angle-up"></i>
             </a>

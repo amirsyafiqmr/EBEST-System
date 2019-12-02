@@ -38,6 +38,10 @@ class bookController extends Controller
 
         \Cart::add($product->equip_id, $product->equipName, $product->equipPrice, $request->quantity, array());
 
+        $input = $request->validate(['quantity' => 'required']);
+
+        $product->update(['equipQuantity' => $product->equipQuantity - $input['quantity']]);
+
         return back()->with('success', $product->equipName. ' has successfully beed added to the booking list!');
     }
 
@@ -86,7 +90,7 @@ class bookController extends Controller
     public function detail()
     {
 
-        return view('booking.staffView')->with('books', Booking::paginate(5));
+        return view('booking.staffView')->with('books', Booking::all());
     }
 
     public function detailView($id)
@@ -131,9 +135,9 @@ class bookController extends Controller
             Auth::user()->email,
             null,
             Auth::user()->name,
-            \Duit\MYR::given(200*100),
+            \Duit\MYR::given(\Cart::getSubTotal()/2*100),
             ['callback_url' => 'http://example.com/webhook/', 'redirect_url' => 'http://ebest.test/invoice/redirect'],
-            'Apple'
+            'Your booking will be proceed after deposit has been pay'
         );
 
         $bplz_result = $response->toArray();
@@ -146,10 +150,6 @@ class bookController extends Controller
         $purchase->billplz_id = $bplz_result['id'];
         $purchase->url = $bplz_result['url'];
         $purchase->save();
-
-        $unpaidStatus = "UNPAID";
-
-        $booking->update(['status' => $unpaidStatus]);
 
         return redirect($bplz_result['url']);
 
@@ -244,6 +244,8 @@ class bookController extends Controller
                 'organizerPno' => $input['organizerPno']
             ]);
 
+
+
             return redirect('/update/booking/'. $id)->with('success',"Your booking information has successfully update!");
             //return redirect('/update/equipment/'.$id);
             //Session::flash('update_profile','Update profile successfully');
@@ -269,9 +271,8 @@ class bookController extends Controller
 
     public function testCheckout(Request $request)
     {
+        $status = "UNPAID";
 
-        // stored data booking
-        // id
         $input = $request->validate([
             'venue' => 'required',
             'eventDate' => 'required',
@@ -284,6 +285,7 @@ class bookController extends Controller
             'eventDate' => $input['eventDate'],
             'organizerPno' => $input['organizerPno'],
             'totalPrice' => \Cart::getSubTotal(),
+            'status' => $status,
             'cust_id' => Auth::guard('customer')->user()->cust_id,
         ]);
 
@@ -297,6 +299,9 @@ class bookController extends Controller
                 'equip_id' => $items->id,
             ]);
         }
+
+
+
         return redirect()->route('book.invoice', ['id' => $equipment->book_id]);
 
     }

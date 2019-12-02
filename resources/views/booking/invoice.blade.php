@@ -68,6 +68,13 @@
                                             <div class="pull-right"> COD </div>
                                             <div class="clearfix"></div>
                                         </div>
+                                        <br>
+                                        <div>
+                                            <!-- /col-md-3 -->
+                                            <div class="pull-left"> DEPOSIT : </div>
+                                            <div class="pull-right"> {{ $booking->status }} </div>
+                                            <div class="clearfix"></div>
+                                        </div>
                                         <!-- /row -->
                                         <br>
                                         <div class="well well-small green">
@@ -154,71 +161,3 @@
         </section>
     </section>
 @endsection
-<!-- /row -->
-{{--                                <!-- /col-lg-10 -->--}}
-{{--                                <div class="col-lg-12">--}}
-{{--                                <div class="content-panel">--}}
-{{--                                <section id="unseen">--}}
-{{--                                <table class="table table-bordered table-striped table-condensed">--}}
-{{--                                    <thead>--}}
-{{--                                    <tr>--}}
-
-{{--                                        <th class="text-left">DESCRIPTION</th>--}}
-{{--                                        <th style="width:140px" class="text-right">QUANTITY</th>--}}
-{{--                                        <th style="width:140px" class="text-right">UNIT PRICE</th>--}}
-{{--                                        <th style="width:90px" class="text-right">TOTAL PRICE</th>--}}
-{{--                                    </tr>--}}
-{{--                                    </thead>--}}
-{{--                                    <tbody>--}}
-{{--                                    <tr>--}}
-{{--                                     @foreach($equipment_customers as $detail)--}}
-{{--                                        <td>EquipName{{$detail->equipment->equipName}}</td>--}}
-{{--                                        <td >Quantity{{ $detail->quantity }}</td>--}}
-{{--                                        <td >{{$detail->equipment->equipPrice}}</td>--}}
-{{--                                        <td >{{'RM'. $detail->quantity * $detail->equipment->equipPrice}}</td>--}}
-{{--                                     @endforeach--}}
-{{--                                    </tr>--}}
-{{--                                    <tr>--}}
-{{--                                        <td class="text-center"><strong>EVENT : {{ $booking->eventDate }}<br><br>--}}
-{{--                                                VENUE : {{ $booking->venue }}</strong></td>--}}
-{{--                                        <td class="text-center"></td>--}}
-{{--                                        <td class="text-right"></td>--}}
-{{--                                        <td class="text-right"></td>--}}
-{{--                                    </tr>--}}
-{{--                                    <tr>--}}
-{{--                                        <td colspan="2" rowspan="4">--}}
-{{--                                            <h4>Terms and Conditions</h4>--}}
-{{--                                            <p>Thank you for your business. We do expect payment within 14 days, so please process this invoice within that time. There will be a 6% interest charge for every booking.</p>--}}
-{{--                                        <td class="text-right"><strong>Subtotal</strong></td>--}}
-{{--                                        <td class="text-right">RM {{ $booking->totalPrice }}</td>--}}
-{{--                                    </tr>--}}
-{{--                                    <tr>--}}
-{{--                                        <td class="text-right no-border"><strong>SST Included in Total</strong></td>--}}
-{{--                                        <td class="text-right">RM 0.06</td>--}}
-{{--                                    </tr>--}}
-{{--                                    <tr>--}}
-{{--                                        <td class="text-right no-border">--}}
-{{--                                            <div class="well well-small green"><strong>Total</strong></div>--}}
-{{--                                        </td>--}}
-{{--                                        <td class="text-right"><strong>RM 235560.00</strong></td>--}}
-{{--                                    </tr>--}}
-{{--                                    </tbody>--}}
-{{--                                </table>--}}
-{{--                                <br>--}}
-{{--                                <br>--}}
-{{--                                <center><!--button type="button" class="btn btn-round btn-danger">Reset</button-->--}}
-{{--                                    <!--button type="button" class="btn btn-round btn-success">Confirm</button-->--}}
-{{--                                    <a href="/custMain" class="btn btn-round btn-danger">--}}
-{{--                                        Cancel--}}
-{{--                                    </a>--}}
-{{--                                    <a href="/custForm" class="btn btn-round btn-warning">--}}
-{{--                                        Back--}}
-{{--                                    </a>--}}
-{{--                                    <a href="/custInvoice" class="btn btn-round btn-success">--}}
-{{--                                        Pay--}}
-{{--                                    </a></center>--}}
-{{--                                </section>--}}
-{{--                                </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-<!--/col-lg-12 mt -->

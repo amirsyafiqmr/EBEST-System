@@ -18,13 +18,14 @@
                                     <div class="card-body">
                                         <h4 class="card-title"><a href="" title="View Product">{{$product->equipName}}</a></h4>
                                         <p class="card-text">Category: {{$product->equipType}}</p>
-                                        <p class="card-text">Quantity in Stock: {{$product->equipQuantity}} unit</p>
+                                        <p class="card-text" id="label_{{$product->equip_id}}" name="currQuantity">Quantity in Stock: {{$product->equipQuantity}} unit</p>
 
                                                 <form method="POST" action="{{route('cart.add')}}" class="form-inline my-2 my-lg-0" >
                                                     @csrf
                                                     <input name="id" type="hidden" value="{{$product->equip_id}}">
                                                     <label for="lastName">Desired Quantity*: </label>
-                                                    <input name="quantity" type="text" /> unit
+                                                    <input hidden value="{{$product->equipQuantity}}" id="stock_{{$product->equip_id}}" />
+                                                    <input class="quantityProduct" id="quantity_{{$product->equip_id}}" name="quantity" type="text" /> unit
                                                     <a class="btn btn-danger btn-block">Unit Price: RM {{$product->equipPrice}}</a>
                                                     <button class="btn btn-success btn-block" type="submit">Add to list</button>
                                                 </form>
@@ -49,11 +50,31 @@
             </p>
             <div class="credits">
                 mem@madetillevent.com.my</div>
-            <a href="custMain.html" class="go-top">
+            <a href="" class="go-top">
                 <i class="fa fa-angle-up"></i>
             </a>
         </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(".quantityProduct").keyup(function(){
+            let quantity = $(this).val();
+            var myId = $(this).attr('id');
+            console.log(myId);
+            var id = myId.split('_');
+            console.log(id[1]);
+            var stock = $('#stock_'+ id[1]).val();
+            console.log(stock);
+            quantity = stock - quantity;
+            console.log(quantity);
+            $('#label_'+ id[1]).text('Quantity in Stock: '+quantity + ' Unit');
+
+            var data = {quantity : quantity};
+
+            $.post('/cart-add/booking', {quantity1 : quantity}, 'json');
+
+        })
+    </script>
     <!--footer end-->
 @endsection
 

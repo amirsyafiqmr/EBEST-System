@@ -2,9 +2,7 @@
 
 @section('content')
 
-    {{--    @auth--}}
-
-    <section id="main-content">
+     <section id="main-content">
         <section class="wrapper">
             <!--div class="center">
               <!--div class="col-lg-9 main-chart">
@@ -21,13 +19,11 @@
             <br>
             <div class="border-head">
             </div>
-
-            <!--div class="row mt">
+        @include('messages')
         <!-- RECENT BOOKING START HERE -->
             <h3><i class="fa fa-angle-right"></i> List Of Customer Booking</h3>
-            <!--div class="row mb">
               <!-- page start-->
-            @include('messages')
+
             <div class="content-panel">
                 <div class="adv-table">
                     <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
@@ -41,7 +37,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($details as $detail)
+                        @foreach($details->reverse() as $detail)
                             <tr class="gradeC">
                                 <td class="hidden-phone">{{ $detail->book_id }}</td>
                                 <td class="hidden-phone">{{ $detail->customer->name }}</td>
@@ -55,22 +51,11 @@
                         @endforeach
                         </tbody>
                     </table>
-                    {{$details->links()}}
                 </div>
-                <!-- /row -->
             </div>
-            <!-- /col-lg-9 END SECTION MIDDLE -->
-            <!--
-            </col-lg-3 -->
         </section>
     </section>
-    <!--main content end-->
-    <!--footer start-->
-    {{--    @else--}}
-    {{--        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
-    {{--            @csrf--}}
-    {{--        </form>--}}
-    {{--    @endauth--}}
+
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <!--footer start-->
     <footer class="site-footer">
@@ -78,14 +63,7 @@
             <p>
                 &copy; Copyrights <strong>Madetill Event Management Sdn. Bhd.</strong>. All Rights Reserved
             </p>
-            <div class="credits">
-                <!--
-      You are NOT allowed to delete the credit link to TemplateMag with free version.
-      You can delete the credit link only if you bought the pro version.
-      Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/dashio-bootstrap-admin-template/
-                  Licensing information: https://templatemag.com/license/
-                -->
-                mem@madetillevent.com.my</div>
+            <div class="credits">mem@madetillevent.com.my</div>
             <a href="#" class="go-top">
                 <i class="fa fa-angle-up"></i>
             </a>

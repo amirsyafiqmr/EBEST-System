@@ -70,7 +70,7 @@
             </p>
             <div class="credits">
                 mem@madetillevent.com.my</div>
-            <a href="custMain.html" class="go-top">
+            <a href="" class="go-top">
                 <i class="fa fa-angle-up"></i>
             </a>
         </div>

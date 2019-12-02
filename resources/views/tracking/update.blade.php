@@ -47,7 +47,13 @@
                             <div class="col-sm-10">
                                 <input id="input" width="312" name="dateTimeTrack" value="{{ $tracking->dateTimeTrack }}" />
                                 <script>
-                                    $('#input').datetimepicker({ footer: true, modal: true });
+                                    $('#input').datetimepicker({ footer: true, modal: true,
+                                        datepicker: {
+                                            disableDates:  function (date) {
+                                                const currentDate = new Date();
+                                                return date > currentDate ? true : false;
+                                            }
+                                    }});
                                 </script>
                             </div>
                         </div>
@@ -58,15 +64,9 @@
                 </div>
             </div>
 
-
-
-            <!-- /row -->
-
         </section>
-        <!-- /wrapper -->
+
     </section>
-    <!-- /MAIN CONTENT -->
-    <!--main content end-->
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <!--footer start-->
@@ -75,14 +75,7 @@
             <p>
                 &copy; Copyrights <strong>Madetill Event Management Sdn. Bhd.</strong>. All Rights Reserved
             </p>
-            <div class="credits">
-                <!--
-      You are NOT allowed to delete the credit link to TemplateMag with free version.
-      You can delete the credit link only if you bought the pro version.
-      Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/dashio-bootstrap-admin-template/
-                  Licensing information: https://templatemag.com/license/
-                -->
-                mem@madetillevent.com.my</div>
+            <div class="credits">mem@madetillevent.com.my</div>
             <a href="#" class="go-top">
                 <i class="fa fa-angle-up"></i>
             </a>
