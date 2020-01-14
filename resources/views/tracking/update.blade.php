@@ -53,7 +53,7 @@
                                                 const currentDate = new Date();
                                                 return date > currentDate ? true : false;
                                             }
-                                    }});
+                                        }});
                                 </script>
                             </div>
                         </div>

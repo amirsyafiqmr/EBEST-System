@@ -2,7 +2,6 @@
 
 @section('content')
 
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
     <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
@@ -12,6 +11,10 @@
             <div class="col-lg-12">
                 <div class="form-panel">
                     @include('messages')
+
+                    <h1 class="CENTERED">Booking Details</h1>
+                    <hr class="mb-4"><BR>
+
                 <div class="row top-15">
                     <div class="col-md-4 order-md-2 mb-4">
                         <h4 class="d-flex justify-content-between align-items-center mb-3">
@@ -41,12 +44,9 @@
                     </div>
 
                     <div class="col-md-8 order-md-1">
-                        <h4 class="mb-3">Booking Details</h4>
                         <form class="needs-validation" method="post" action="{{ route('test.checkout') }}" novalidate>
                             @csrf
 
-
-                            <hr class="mb-4">
                             <div class="mb-3">
                                 <label for="">Venue Event</label>
                                 <textarea name="venue" class="form-control @error('venue') is-invalid @enderror" id="venue" rows="5" > </textarea>
@@ -97,7 +97,7 @@
         </section>
     </section>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br>
 
     <!--main content end-->
     <!--footer start-->

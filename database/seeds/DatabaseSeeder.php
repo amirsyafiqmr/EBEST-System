@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             'staff_id' => '2016535429',
             'staffName' => 'Admin@MEM',
             'staffAddress' => 'Madetill Event Management Sdn. Bhd, Balakong, Selangor',
-            'password' => '$2y$10$gPGrjTho2D54Iw3NE3IzmeoCqbLPh29Cui.6bMyYiWB9YQQyMfBVy',
+            'password' => '$2y$10$N4KyahBChh2LySp/D6xDJOAKfxtjGcEQJrqzDznRSEPD5zNC944EW',
             'staffEmail' => 'admin@gmail.com',
             'staffPhoneNo' => '0132761397',
             'staffDesignation' => 'Admin'

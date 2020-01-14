@@ -4,7 +4,9 @@
 
     <section id="main-content">
         <section class="wrapper">
-
+            <div class="border-head">
+                <center><h1><b>MADETILL EVENT MANAGEMENT BOOKING CATALOGUE</b></h1></center>
+            </div><BR><BR>
             <h3><i class="fa fa-angle-right"></i> List Of Equipment</h3>
             <div class="row top-15">
                 @include('messages')
@@ -18,7 +20,7 @@
                                     <div class="card-body">
                                         <h4 class="card-title"><a href="" title="View Product">{{$product->equipName}}</a></h4>
                                         <p class="card-text">Category: {{$product->equipType}}</p>
-                                        <p class="card-text" id="label_{{$product->equip_id}}" name="currQuantity">Quantity in Stock: {{$product->equipQuantity}} unit</p>
+                                        <p class="card-text" id="label_{{$product->equip_id}}" name="currQuantity">Quantity in Stock: {{$product->equipCurrentQuantity}} unit</p>
 
                                                 <form method="POST" action="{{route('cart.add')}}" class="form-inline my-2 my-lg-0" >
                                                     @csrf

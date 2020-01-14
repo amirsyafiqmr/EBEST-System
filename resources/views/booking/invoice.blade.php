@@ -72,7 +72,7 @@
                                         <div>
                                             <!-- /col-md-3 -->
                                             <div class="pull-left"> DEPOSIT : </div>
-                                            <div class="pull-right"> {{ $booking->status }} </div>
+                                            <div class="pull-right"> {{ $booking->paymentStatus }} </div>
                                             <div class="clearfix"></div>
                                         </div>
                                         <!-- /row -->

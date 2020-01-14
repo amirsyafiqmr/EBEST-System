@@ -23,6 +23,10 @@
     <link href="../../../../temp1/css/style.css" rel="stylesheet">
     <link href="../../../../temp1/css/style-responsive.css" rel="stylesheet">
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
     <!-- **********************************************************************************************************************************************************
         MAIN CONTENT
 *********************************************************************************************************************************************************** -->
@@ -52,17 +56,36 @@
                         <div class="form-group">
                             <label class="col-sm-2 col-sm-2 control-label">Delivery Date and Time</label>
                             <div class="col-md-4">
-                                <input size="16" type="text" name="deliveryDate" value="{{ $bookings->deliveryDate }}" readonly class="form_datetime form-control">
+{{--                                <input size="16" type="text" name="deliveryDate" value="{{ $bookings->deliveryDate }}" readonly class="form_datetime form-control">--}}
+                                <input id="input" width="312" name="deliveryDate" value="{{ $bookings->deliveryDate }}" />
+                                <script>
+                                    $('#input').datetimepicker({ footer: true, modal: true,
+                                        datepicker: {
+                                            disableDates:  function (date) {
+                                                const currentDate = new Date();
+                                                return date > currentDate ? true : false;
+                                            }
+                                        }});
+                                </script>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-sm-2 col-sm-2 control-label">Collection Date and Time</label>
                                 <div class="col-md-4">
-                                    <input size="16" type="text" name="collectDate" value="{{ $bookings->collectDate }}" readonly class="form_datetime form-control">
+{{--                                    <input size="16" type="text" name="collectDate" value="{{ $bookings->collectDate }}" readonly class="form_datetime form-control">--}}
+                                    <input id="input1" width="312" name="collectDate" value="{{ $bookings->collectDate }}" />
+                                    <script>
+                                        $('#input1').datetimepicker({ footer: true, modal: true,
+                                            datepicker: {
+                                                disableDates:  function (date) {
+                                                    const currentDate = new Date();
+                                                    return date > currentDate ? true : false;
+                                                }
+                                            }});
+                                    </script>
                                 </div>
                         </div>
-
                         <button class="btn btn-round btn-success" type="submit">Confirm</button>
                     </form>
                 </div>
@@ -79,13 +102,7 @@
                 &copy; Copyrights <strong>Madetill Event Management Sdn. Bhd.</strong>. All Rights Reserved
             </p>
             <div class="credits">
-                <!--
-      You are NOT allowed to delete the credit link to TemplateMag with free version.
-      You can delete the credit link only if you bought the pro version.
-      Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/dashio-bootstrap-admin-template/
-                  Licensing information: https://templatemag.com/license/
-                -->
-                mem@madetillevent.com.my</div>
+               mem@madetillevent.com.my</div>
             <a href="#" class="go-top">
                 <i class="fa fa-angle-up"></i>
             </a>

@@ -46,9 +46,9 @@ Route::post('/login/customer', 'Auth\LoginController@customerLogin')->name('logi
 
 //Register User
 
-//Route::get('/register/staff', 'Auth\RegisterController@showStaffRegisterForm')->name('staffRegister'); Buka bila migrate refresh database
+//Route::get('/register/staff', 'Auth\RegisterController@showStaffRegisterForm')->name('staffRegister'); //Buka bila migrate refresh database
 //
-//Route::post('/register/staff', 'Auth\RegisterController@createStaff'); Buka bila migrate refresh database
+//Route::post('/register/staff', 'Auth\RegisterController@createStaff'); //Buka bila migrate refresh database
 
 Route::get('/register/staff', 'staffController@showStaffRegisterForm')->name('staffRegister');
 

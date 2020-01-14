@@ -12,19 +12,6 @@
     <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
     <meta name="author" content="QBOOTSTRAP.COM" />
 
-    <!--
-      //////////////////////////////////////////////////////
-
-      FREE HTML5 TEMPLATE
-      DESIGNED & DEVELOPED by QBOOTSTRAP.COM
-
-      Website: 		http://qbootstrap.com/
-      Email: 			info@qbootstrap.com
-      Twitter: 		http://twitter.com/Q_bootstrap
-      Facebook: 		https://www.facebook.com/Qbootstrap
-      //////////////////////////////////////////////////////
-       -->
-
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content=""/>
     <meta property="og:image" content=""/>
@@ -38,6 +25,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ asset('logo-amir.ico') }}" />
 
     <!-- Animate.css -->
     <link rel="stylesheet" href="med/css/animate.css">

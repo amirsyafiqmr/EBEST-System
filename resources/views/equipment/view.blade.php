@@ -36,8 +36,9 @@
                                 <th class="hidden-phone"> </th>
                                 <th class="hidden-phone">Equipment Name</th>
                                 <th class="hidden-phone">Equipment Type</th>
-                                <th class="hidden-phone">Equipment Price Per Unit</th>
-                                <th class="hidden-phone">Equipment Quantity in Stock</th>
+                                <th class="centered">Equipment Price Per Unit</th>
+                                <th class="centered" width="200">Equipment Actual Quantity in Stock</th>
+                                <th class="centered" width="200">Equipment Current Quantity in Stock</th>
                                 <th class="hidden-phone"> </th>
                             </tr>
                             </thead>
@@ -58,7 +59,8 @@
                                     <td class="hidden-phone">{{ $equip->equipName }}</td>
                                     <td class="hidden-phone">{{ $equip->equipType }}</td>
                                     <td class="center">RM {{ $equip->equipPrice }}</td>
-                                    <td class="hidden-phone">{{ $equip->equipQuantity }}</td>
+                                    <td class="centered">{{ $equip->equipQuantity }}</td>
+                                    <td class="centered">{{ $equip->equipCurrentQuantity }}</td>
                                     <td class="hidden-phone">
                                         <form method="post" action="{{ route('equipDestroy', $equip->equip_id) }}" class="form-horizontal style-form" enctype="multipart/form-data">
 

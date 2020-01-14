@@ -8,7 +8,7 @@
               <!--div class="col-lg-9 main-chart">
                 <!--CUSTOM CHART START -->
             <div class="border-head">
-                <center><h1><b>MADETILL EVENT MANAGEMENT EQUIPMENT</b></h1></center>
+                <center><h1><b>MADETILL EVENT MANAGEMENT TRACKING</b></h1></center>
             </div>
             <br>
             <div class="header-ebest">

@@ -73,7 +73,7 @@
                                         <div>
                                             <!-- /col-md-3 -->
                                             <div class="pull-left"> DEPOSIT : </div>
-                                            <div class="pull-right"> <strong>{{$booking->status}}</strong></div>
+                                            <div class="pull-right"> <strong>{{$booking->paymentStatus}}</strong></div>
                                             <div class="clearfix"></div>
                                         </div>
                                         <!-- /row -->
@@ -143,7 +143,7 @@
                                     <a href="" class="btn btn-round btn-primary">
                                         Print
                                     </a>
-                                    @if($booking->status == "UNPAID")
+                                    @if($booking->paymentStatus == "UNPAID")
                                         <a href="#" onclick="event.preventDefault();
                                             document.getElementById('newbill-form').submit();"
                                            class="btn btn-round btn-success">

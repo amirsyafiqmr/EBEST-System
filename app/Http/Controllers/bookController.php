@@ -40,7 +40,7 @@ class bookController extends Controller
 
         $input = $request->validate(['quantity' => 'required']);
 
-        $product->update(['equipQuantity' => $product->equipQuantity - $input['quantity']]);
+        $product->update(['equipCurrentQuantity' => $product->equipQuantity - $input['quantity']]);
 
         return back()->with('success', $product->equipName. ' has successfully beed added to the booking list!');
     }
@@ -135,7 +135,8 @@ class bookController extends Controller
             Auth::user()->email,
             null,
             Auth::user()->name,
-            \Duit\MYR::given(\Cart::getSubTotal()/2*100),
+//            \Duit\MYR::given(\Cart::getSubTotal()/2*100),
+            \Duit\MYR::given($booking->totalPrice/2*100),
             ['callback_url' => 'http://example.com/webhook/', 'redirect_url' => 'http://ebest.test/invoice/redirect'],
             'Your booking will be proceed after deposit has been pay'
         );
@@ -178,19 +179,21 @@ class bookController extends Controller
 
             $updatePayment = "PAID";
 
+            $statusBooking = "PROCEED";
+
             $payment = Payment::whereBillplz_id($data['id'])->first();
 
             $booking = Booking::where('book_id', $payment->book_id)->first();
 
 //            $booking->update(['status' => $data['paid']]);
 
-            $booking->update(['status' => $updatePayment]);
+            $booking->update(['paymentStatus' => $updatePayment]);
+
+            $booking->update(['bookingStatus' => $statusBooking]);
 
             return redirect('/view/booking');
 
         }
-
-
     }
 
     /**
@@ -273,6 +276,8 @@ class bookController extends Controller
     {
         $status = "UNPAID";
 
+        $bookingStatus = "PENDING";
+
         $input = $request->validate([
             'venue' => 'required',
             'eventDate' => 'required',
@@ -285,7 +290,8 @@ class bookController extends Controller
             'eventDate' => $input['eventDate'],
             'organizerPno' => $input['organizerPno'],
             'totalPrice' => \Cart::getSubTotal(),
-            'status' => $status,
+            'paymentStatus' => $status,
+            'bookingStatus' => $bookingStatus,
             'cust_id' => Auth::guard('customer')->user()->cust_id,
         ]);
 

@@ -59,10 +59,17 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="col-sm-2 col-sm-2 control-label">Equipment Quantity</label>
+                            <label class="col-sm-2 col-sm-2 control-label">Equipment Actual Quantity</label>
                             <div class="col-sm-10">
-                                <input type="text" name="equipQuantity" class="form-control @error('equipQuantity') is-invalid @enderror" value="{{ $equipment->equipQuantity }}">
-                                @error('equipQuantity')
+                                <input type="text" name="equipQuantity" class="form-control" value="{{ $equipment->equipQuantity }}" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">Equipment Current Quantity</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="equipCurrentQuantity" class="form-control @error('equipCurrentQuantity') is-invalid @enderror" value="{{ $equipment->equipCurrentQuantity }}">
+                                @error('equipCurrentQuantity')
                                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

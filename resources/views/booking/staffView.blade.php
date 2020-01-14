@@ -10,15 +10,14 @@
               <!--div class="col-lg-9 main-chart">
                 <!--CUSTOM CHART START -->
             <div class="border-head">
-                <center><h1><b>MADETILL EVENT MANAGEMENT EQUIPMENT</b></h1></center>
+                <center><h1><b>MADETILL EVENT MANAGEMENT CUSTOMER BOOKING</b></h1></center>
             </div>
             <br>
             <div class="header-ebest">
 
             </div>
             <br>
-            <br>
-            <br>
+
             <div class="border-head">
             </div>
 
@@ -38,6 +37,7 @@
                             <th class="hidden-phone">Event Venue</th>
                             <th class="hidden-phone">Delivery Date</th>
                             <th class="hidden-phone">Collection Date</th>
+                            <th class="centered">Booking Status</th>
                             <th class="hidden-phone"> </th>
                         </tr>
                         </thead>
@@ -50,6 +50,7 @@
                                 <td class="hidden-phone">{{ $book->venue }}</td>
                                 <td class="hidden-phone">{{ $book->deliveryDate }}</td>
                                 <td class="hidden-phone">{{ $book->collectDate }}</td>
+                                <td class="centered">{{ $book->bookingStatus }}</td>
                                 <td class="hidden-phone">
 {{--                                    <a class="btn btn-primary" href="{{ route('createTracking', $detail->book_id) }}" class="nav-link {{ (request()->is('/create/tracking/*')) ? 'active show-sub' : '' }}">Create Tracking</a>--}}
                                     <a class="btn btn-success" href="{{ route('staffBookview', $book->book_id) }}" class="nav-link {{ (request()->is('/staffDetailView/booking/*')) ? 'active show-sub' : '' }}">View Details</a>

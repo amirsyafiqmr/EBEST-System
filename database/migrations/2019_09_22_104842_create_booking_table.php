@@ -22,7 +22,8 @@ class CreateBookingTable extends Migration
             $table->double('totalPrice');
             $table->string('deliveryDate')->nullable();
             $table->string('collectDate')->nullable();
-            $table->string('status')->nullable();
+            $table->string('paymentStatus')->nullable();
+            $table->string('bookingStatus')->nullable();
             $table->string('cust_id');
             $table->string('staff_id')->nullable();
             $table->timestamps();

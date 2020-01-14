@@ -12,7 +12,7 @@ class Booking extends Model
 
     protected $fillable = [
 
-        'book_id', 'venue', 'eventDate', 'organizerPno', 'totalPrice', 'deliveryDate', 'collectDate', 'status', 'staff_id', 'cust_id', 'equip_id', 'paymentID',
+        'book_id', 'venue', 'eventDate', 'organizerPno', 'totalPrice', 'deliveryDate', 'collectDate', 'paymentStatus', 'bookingStatus', 'staff_id', 'cust_id', 'equip_id', 'paymentID',
 
     ];
 

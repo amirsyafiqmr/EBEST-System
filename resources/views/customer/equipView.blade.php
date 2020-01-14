@@ -46,7 +46,7 @@
                                 <td class="hidden-phone">{{ $equip->equipName }}</td>
                                 <td class="hidden-phone">{{ $equip->equipType }}</td>
                                 <td class="hidden-phone">RM {{ $equip->equipPrice }}</td>
-                                <td class="hidden-phone">{{ $equip->equipQuantity }}</td>
+                                <td class="hidden-phone">{{ $equip->equipCurrentQuantity }}</td>
                             </tr>
                         @endforeach
                         </tbody>

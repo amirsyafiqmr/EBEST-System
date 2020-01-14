@@ -10,7 +10,7 @@
               <!--div class="col-lg-9 main-chart">
                 <!--CUSTOM CHART START -->
             <div class="border-head">
-                <center><h1><b>MADETILL EVENT MANAGEMENT EQUIPMENT</b></h1></center>
+                <center><h1><b>MADETILL EVENT MANAGEMENT CUSTOMER BOOKING</b></h1></center>
             </div>
             <br>
             <div class="header-ebest">
@@ -37,6 +37,7 @@
                             <th class="centered" >Delivery Date</th>
                             <th class="centered" >Collection Date</th>
                             <th class="centered" >Status Payment Deposit</th>
+                            <th class="centered" >Booking Status</th>
                             <th class="centered" width="100"> </th>
                         </tr>
                         </thead>
@@ -49,7 +50,8 @@
                                 <td class="center">RM {{ $book->totalPrice }}</td>
                                 <td class="center">{{ $book->deliveryDate }}</td>
                                 <td class="center">{{ $book->collectDate }}</td>
-                                <td class="center">{{ $book->status }}</td>
+                                <td class="center">{{ $book->paymentStatus }}</td>
+                                <td class="center">{{ $book->bookingStatus }}</td>
                                 <td class="hidden-phone">
                                     <a class="btn btn-primary" href="{{ route('book.detail', $book->book_id) }}" class="nav-link {{ (request()->is('/detail/booking/*')) ? 'active show-sub' : '' }}">View</a>
                                     <a class="btn btn-success" href="{{ route('updateBooking', $book->book_id) }}" class="nav-link {{ (request()->is('/update/booking/*')) ? 'active show-sub' : '' }}">Update</a>

@@ -12,7 +12,7 @@ class Equipment extends Model
 
     protected $fillable = [
 
-        'equip_id', 'equipName', 'equipType', 'equipPrice', 'equipQuantity',  'staff_id', 'image'
+        'equip_id', 'equipName', 'equipType', 'equipPrice', 'equipQuantity', 'equipCurrentQuantity', 'staff_id', 'image'
 
     ];
 

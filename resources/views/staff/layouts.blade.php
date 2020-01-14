@@ -25,13 +25,8 @@
     <link href="../../../../../../temp1/css/style.css" rel="stylesheet">
     <link href="../../../../../../temp1/css/style-responsive.css" rel="stylesheet">
     <script src="../../../../../../temp1/lib/chart-master/Chart.js"></script>
+    <link rel="shortcut icon" href="{{ asset('logo-amir.ico') }}" />
 
-    <!-- =======================================================
-      Template Name: Dashio
-      Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
-      Author: TemplateMag.com
-      License: https://templatemag.com/license/
-    ======================================================= -->
 </head>
 
 <body>
@@ -124,10 +119,12 @@
 {{--                    </ul>--}}
                 </li>
                 <li class="sub-menu">
+                    @if (Auth::guard('staff')->user()->staff_id == "2016535429")
                     <a href="{{ route('staffRegister') }}">
                         <i class="fa fa-user"></i>
                         <span>Staff</span>
                     </a>
+                    @endif
                 </li>
                 <li class="sub-menu">
                     <a href="{{ route('staffView', Auth::guard('staff')->user()->staff_id) }}" class="nav-link {{ (request()->is('staffViewAcc/*')) ? 'active show-sub' : '' }}">

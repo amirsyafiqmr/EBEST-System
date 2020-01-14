@@ -33,18 +33,7 @@
     <link href="../../temp1/css/style.css" rel="stylesheet">
     <link href="../../temp1/css/style-responsive.css" rel="stylesheet">
     <script src="../../temp1/lib/chart-master/Chart.js"></script>
-
-{{--    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">--}}
-{{--    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">--}}
-
-
-
-    <!-- =======================================================
-      Template Name: Dashio
-      Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
-      Author: TemplateMag.com
-      License: https://templatemag.com/license/
-    ======================================================= -->
+    <link rel="shortcut icon" href="{{ asset('logo-amir.ico') }}" />
 </head>
 
 <body>
@@ -187,22 +176,6 @@
 <script type="../../temp1/text/javascript">
 <script src="../../temp1/lib/advanced-form-components.js"></script>
 
-{{--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>--}}
-{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>--}}
-{{--<script type="text/javascript">--}}
-
-{{--    $('.date').datepicker({--}}
-
-{{--        format: 'yyyy-mm-dd'--}}
-
-{{--    });--}}
-
-{{--</script>--}}
-
-<!-- js placed at the end of the document so the pages load faster -->
-
-
-
 <!--script for this page-->
 <script src="../temp1/lib/jquery-ui-1.9.2.custom.min.js"></script>
 <script type="text/javascript" src="../temp1/lib/bootstrap-fileupload/bootstrap-fileupload.js"></script>
@@ -213,28 +186,6 @@
 <script type="text/javascript" src="../temp1/lib/bootstrap-daterangepicker/moment.min.js"></script>
 <script type="text/javascript" src="../temp1/lib/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
 <script src="../temp1/lib/advanced-form-components.js"></script>
-
-
-{{--<script>--}}
-{{--    $(document).ready(function() {--}}
-{{--        var unique_id = $.gritter.add({--}}
-{{--        // (string | mandatory) the heading of the notification--}}
-{{--        title: 'Welcome to Dashio!',--}}
-{{--        // (string | mandatory) the text inside the notification--}}
-{{--        text: 'Hover me to enable the Close Button. You can hide the left sidebar clicking on the button next to the logo.',--}}
-{{--        // (string | optional) the image to display on the left--}}
-{{--        image: 'img/ui-sam.jpg',--}}
-{{--        // (bool | optional) if you want it to fade out on its own or just sit there--}}
-{{--        sticky: false,--}}
-{{--        // (int | optional) the time you want it to be alive for before fading out--}}
-{{--        time: 8000,--}}
-{{--        // (string | optional) the class name you want to apply to that specific message--}}
-{{--        class_name: 'my-sticky-class'--}}
-{{--      });--}}
-
-{{--      return false;--}}
-{{--    });--}}
-{{--  </script>--}}
 <script type="application/javascript">
     $(document).ready(function() {
         $("#date-popover").popover({

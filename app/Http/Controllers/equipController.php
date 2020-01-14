@@ -68,10 +68,13 @@ class equipController extends Controller
             'equipType' => $input['equipType'],
             'equipPrice' => $input['equipPrice'],
             'equipQuantity' => $input['equipQuantity'],
+            'equipCurrentQuantity' => $input['equipQuantity'],
             'staff_id' => Auth::guard('staff')->user()->staff_id,
             'image' => $new_name
-
         ]);
+
+//        $equipment->update(['equipCurrentQuantity' => $input['equipQuantity']]);
+
         return redirect('/view/equipment')->with('success', $equipment->equipName. ' Has Successfully Create!');
     }
 
@@ -116,14 +119,14 @@ class equipController extends Controller
                 'equipName' => 'required',
                 'equipType' => 'required',
                 'equipPrice' => 'required|string',
-                'equipQuantity' => 'required|numeric'
+                'equipCurrentQuantity' => 'required|numeric|lte:equipQuantity'
             ]);
 
             $equipment->update([
                 'equipName' => $input['equipName'],
                 'equipType' => $input['equipType'],
                 'equipPrice' => $input['equipPrice'],
-                'equipQuantity' => $input['equipQuantity'],
+                'equipCurrentQuantity' => $input['equipCurrentQuantity'],
                 'staff_id' => Auth::guard('staff')->user()->staff_id,
             ]);
 

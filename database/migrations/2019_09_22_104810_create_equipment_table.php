@@ -19,6 +19,7 @@ class CreateEquipmentTable extends Migration
             $table->string('equipType');
             $table->double('equipPrice');
             $table->integer('equipQuantity');
+            $table->integer('equipCurrentQuantity')->nullable();
             $table->string('staff_id');
             $table->string('image');
             $table->timestamps();

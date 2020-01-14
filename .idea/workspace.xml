@@ -2,21 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fb70e66-286c-461c-89ae-f3ce61897dc1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/logo-amir.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bd7ccefa-3756-42ed-9c50-6879e9222290.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bd7ccefa-3756-42ed-9c50-6879e9222290.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Booking.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Booking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Equipment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Equipment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/bookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/bookController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/trackController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/trackController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/equipController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/equipController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_22_104810_create_equipment_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_22_104810_create_equipment_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_22_104842_create_booking_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_22_104842_create_booking_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/booking/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/cart.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/booking/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/detail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/booking/invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/invoice.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/booking/staffDetailView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/staffDetailView.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/booking/staffView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/staffView.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/booking/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/booking/updateDate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/updateDate.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/booking/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/view.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/booking/viewBooking.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/viewBooking.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/customer/equipView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/equipView.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/equipment/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/equipment/update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/equipment/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/equipment/view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/homepage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/homepage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/messages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/messages.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/staff/layouts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/staff/layouts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tracking/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tracking/search.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tracking/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tracking/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/tracking/staffView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tracking/staffView.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/tracking/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tracking/update.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -65,7 +77,14 @@
         <item name="MySQL - @localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="ebest: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="staff: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="booking: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - @localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="ebest: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="equipment: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -197,22 +216,22 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Programs\laragon\www\EBEST\public\med\images" />
-      <recent name="D:\Programs\laragon\www\EBEST\public" />
-      <recent name="D:\Programs\laragon\www\EBEST\public\del\img\bg-img" />
-      <recent name="D:\Programs\laragon\www\EBEST\public\del\img\core-img" />
-      <recent name="D:\Programs\laragon\www\EBEST\resources\views" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Programs\laragon\www\EBEST\resources\views" />
       <recent name="D:\Programs\laragon\www\EBEST\resources\views\booking" />
       <recent name="D:\Programs\laragon\www\EBEST\resources\views\staff" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programs\laragon\www\EBEST\public" />
+      <recent name="D:\Programs\laragon\www\EBEST\public\med\images" />
+      <recent name="D:\Programs\laragon\www\EBEST\public\del\img\bg-img" />
+      <recent name="D:\Programs\laragon\www\EBEST\public\del\img\core-img" />
+      <recent name="D:\Programs\laragon\www\EBEST\resources\views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -311,6 +330,18 @@
       <workItem from="1574774487080" duration="7680000" />
       <workItem from="1575043615190" duration="41000" />
       <workItem from="1575248453514" duration="23958000" />
+      <workItem from="1575303976146" duration="115000" />
+      <workItem from="1575374334490" duration="2580000" />
+      <workItem from="1575431866803" duration="600000" />
+      <workItem from="1575461755089" duration="3004000" />
+      <workItem from="1576324753760" duration="2413000" />
+      <workItem from="1576397694245" duration="1929000" />
+      <workItem from="1576490949904" duration="917000" />
+      <workItem from="1576563277887" duration="2332000" />
+      <workItem from="1576588751353" duration="909000" />
+      <workItem from="1577848553126" duration="18000" />
+      <workItem from="1578925601700" duration="651000" />
+      <workItem from="1579009606659" duration="11659000" />
     </task>
     <servers />
   </component>
