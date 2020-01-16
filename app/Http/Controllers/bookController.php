@@ -185,14 +185,15 @@ class bookController extends Controller
 
             $booking = Booking::where('book_id', $payment->book_id)->first();
 
-//            $booking->update(['status' => $data['paid']]);
-
             $booking->update(['paymentStatus' => $updatePayment]);
 
             $booking->update(['bookingStatus' => $statusBooking]);
 
             return redirect('/view/booking');
 
+        } else {
+
+            return redirect('/view/booking');
         }
     }
 
@@ -246,8 +247,6 @@ class bookController extends Controller
                 'eventDate' => $input['eventDate'],
                 'organizerPno' => $input['organizerPno']
             ]);
-
-
 
             return redirect('/update/booking/'. $id)->with('success',"Your booking information has successfully update!");
             //return redirect('/update/equipment/'.$id);
@@ -306,10 +305,7 @@ class bookController extends Controller
             ]);
         }
 
-
-
         return redirect()->route('book.invoice', ['id' => $equipment->book_id]);
-
     }
 
     public function editDate(Request $request, $id)

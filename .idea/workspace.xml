@@ -2,35 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fb70e66-286c-461c-89ae-f3ce61897dc1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/logo-amir.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bd7ccefa-3756-42ed-9c50-6879e9222290.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bd7ccefa-3756-42ed-9c50-6879e9222290.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Booking.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Booking.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Equipment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Equipment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/bookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/bookController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/equipController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/equipController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_22_104810_create_equipment_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_22_104810_create_equipment_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_22_104842_create_booking_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_22_104842_create_booking_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/booking/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/cart.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_22_104928_create_equipment_customers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_22_104928_create_equipment_customers_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/booking/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/detail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/booking/invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/invoice.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/booking/staffDetailView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/staffDetailView.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/booking/staffView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/staffView.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/booking/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/booking/updateDate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/updateDate.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/booking/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/booking/viewBooking.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/booking/viewBooking.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/customer/equipView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/customer/equipView.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/equipment/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/equipment/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/equipment/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/equipment/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/homepage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/homepage.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/staff/layouts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/staff/layouts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tracking/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tracking/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tracking/staffView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tracking/staffView.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tracking/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tracking/update.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -341,7 +320,10 @@
       <workItem from="1576588751353" duration="909000" />
       <workItem from="1577848553126" duration="18000" />
       <workItem from="1578925601700" duration="651000" />
-      <workItem from="1579009606659" duration="11659000" />
+      <workItem from="1579009606659" duration="11904000" />
+      <workItem from="1579095206469" duration="3784000" />
+      <workItem from="1579101069255" duration="3547000" />
+      <workItem from="1579151403798" duration="154000" />
     </task>
     <servers />
   </component>

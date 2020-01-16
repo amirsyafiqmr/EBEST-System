@@ -111,7 +111,7 @@
                                                 <td class="hidden-phone"> </td>
                                                 <td class="hidden-phone">{{$detail->equipment->equipName}}</td>
                                                 <td class="hidden-phone">{{ $detail->quantity }}</td>
-                                                <td class="hidden-phone">{{ $detail->quantity }}</td>
+                                                <td class="hidden-phone">{{ 'RM '. $detail->equipment->equipPrice }}</td>
                                                 <td class="hidden-phone">{{'RM'. $detail->quantity * $detail->equipment->equipPrice}}</td>
                                             </tr>
                                         @endforeach
@@ -140,9 +140,9 @@
                                     <a href="{{route('viewBooking', $booking->cust_id)}}" class="btn btn-round btn-warning">
                                         Back
                                     </a>
-                                    <a href="" class="btn btn-round btn-primary">
-                                        Print
-                                    </a>
+{{--                                    <a href="" class="btn btn-round btn-primary">--}}
+{{--                                        Print--}}
+{{--                                    </a>--}}
                                     @if($booking->paymentStatus == "UNPAID")
                                         <a href="#" onclick="event.preventDefault();
                                             document.getElementById('newbill-form').submit();"

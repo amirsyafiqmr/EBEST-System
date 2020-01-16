@@ -48,7 +48,7 @@ Route::post('/login/customer', 'Auth\LoginController@customerLogin')->name('logi
 
 //Route::get('/register/staff', 'Auth\RegisterController@showStaffRegisterForm')->name('staffRegister'); //Buka bila migrate refresh database
 //
-//Route::post('/register/staff', 'Auth\RegisterController@createStaff'); //Buka bila migrate refresh database
+//Route::post('/register/staff', 'Auth\RegisterController@createStaff'); //Buka bila migrate refresh database lepastu pergi ke auth.login tutup dekat situ then g ke staff layout tutup yg manage account
 
 Route::get('/register/staff', 'staffController@showStaffRegisterForm')->name('staffRegister');
 

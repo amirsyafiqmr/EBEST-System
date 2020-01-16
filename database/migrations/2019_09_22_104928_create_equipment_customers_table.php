@@ -21,7 +21,7 @@ class CreateEquipmentCustomersTable extends Migration
             $table->timestamps();
 
             $table->foreign('book_id')->references('book_id')->on('booking');
-            $table->foreign('equip_id')->references('equip_id')->on('equipment');
+            $table->foreign('equip_id')->references('equip_id')->on('equipment')->onDelete('cascade');
         });
     }
 
@@ -32,6 +32,9 @@ class CreateEquipmentCustomersTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
+        Schema::dropIfExists('equipment');
         Schema::dropIfExists('equipment_customers');
+        Schema::enableForeignKeyConstraints();
     }
 }

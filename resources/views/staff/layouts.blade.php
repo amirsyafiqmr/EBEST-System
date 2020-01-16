@@ -113,10 +113,6 @@
                         <i class="fa fa-truck"></i>
                         <span>Tracking</span>
                     </a>
-{{--                    <ul class="sub">--}}
-{{--                        <li><a href="/trackForm">Create Tracking</a></li>--}}
-{{--                        <li><a href="/trackUpdate">Update Tracking</a></li>--}}
-{{--                    </ul>--}}
                 </li>
                 <li class="sub-menu">
                     @if (Auth::guard('staff')->user()->staff_id == "2016535429")

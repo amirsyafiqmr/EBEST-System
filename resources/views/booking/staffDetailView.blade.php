@@ -111,7 +111,7 @@
                                                 <td class="hidden-phone"> </td>
                                                 <td class="hidden-phone">{{$detail->equipment->equipName}}</td>
                                                 <td class="hidden-phone">{{ $detail->quantity }}</td>
-                                                <td class="hidden-phone">{{ $detail->quantity }}</td>
+                                                <td class="hidden-phone">{{ 'RM '. $detail->equipment->equipPrice }}</td>
                                                 <td class="hidden-phone">{{'RM'. $detail->quantity * $detail->equipment->equipPrice}}</td>
                                             </tr>
                                         @endforeach
@@ -143,9 +143,9 @@
                                     <a class="btn btn-round btn-success" href="{{route('dateViewUpdate', $booking->book_id) }}" class="nav-link {{ (request()->is('update/date/*')) ? 'active show-sub' : '' }}" class="btn btn-round btn-success">
                                         Update
                                     </a>
-                                    <a href=" " class="btn btn-round btn-primary">
-                                        Print
-                                    </a>
+{{--                                    <a href=" " class="btn btn-round btn-primary">--}}
+{{--                                        Print--}}
+{{--                                    </a>--}}
                                     </center>
                             </div>
                         </div>

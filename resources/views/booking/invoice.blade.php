@@ -110,8 +110,8 @@
                                                     <td class="hidden-phone"> </td>
                                                     <td class="hidden-phone">{{$detail->equipment->equipName}}</td>
                                                     <td class="hidden-phone">{{ $detail->quantity }}</td>
-                                                    <td class="hidden-phone">{{ $detail->quantity }}</td>
-                                                    <td class="hidden-phone">{{'RM'. $detail->quantity * $detail->equipment->equipPrice}}</td>
+                                                    <td class="hidden-phone">{{ 'RM '. $detail->equipment->equipPrice }}</td>
+                                                    <td class="hidden-phone">{{'RM '. $detail->quantity * $detail->equipment->equipPrice}}</td>
                                                 </tr>
                                             @endforeach
                                             <tr>
