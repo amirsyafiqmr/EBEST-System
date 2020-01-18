@@ -140,9 +140,9 @@
                                     <a href="{{route('viewBooking', $booking->cust_id)}}" class="btn btn-round btn-warning">
                                         Back
                                     </a>
-{{--                                    <a href="" class="btn btn-round btn-primary">--}}
-{{--                                        Print--}}
-{{--                                    </a>--}}
+                                    <a href="{{route('customer.printpdf', $booking->book_id) }}" class="nav-link {{ (request()->is('/customer/print-pdf/*')) ? 'active show-sub' : '' }} btn btn-round btn-success">
+                                        Print
+                                    </a>
                                     @if($booking->paymentStatus == "UNPAID")
                                         <a href="#" onclick="event.preventDefault();
                                             document.getElementById('newbill-form').submit();"

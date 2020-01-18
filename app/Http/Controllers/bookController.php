@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Customer;
 use App\Payment;
+use Barryvdh\DomPDF\Facade as PDF;
 use Billplz\Client;
 use Billplz\Response;
 use DB;
@@ -354,5 +355,30 @@ class bookController extends Controller
         return view('booking.detail', compact('booking', 'equipment_customers'));
 
     }
+
+    public function custPrint($id)
+    {
+
+        $booking = Booking::where('book_id', $id)->first();
+
+        $equipment_customers = EquipmentCustomer::where('book_id', $booking->book_id)->get();
+
+        $pdf = PDF::loadView('print.customer', compact('booking', 'equipment_customers'));
+        return $pdf->download('Booking Detail.pdf');
+
+    }
+
+    public function staffPrint($id)
+    {
+
+        $booking = Booking::where('book_id', $id)->first();
+
+        $equipment_customers = EquipmentCustomer::where('book_id', $booking->book_id)->get();
+
+        $pdf = PDF::loadView('print.staff', compact('booking', 'equipment_customers'));
+        return $pdf->download('Delivery Order.pdf');
+
+    }
+
 
 }

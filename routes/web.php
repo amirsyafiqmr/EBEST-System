@@ -174,3 +174,10 @@ Route::get('/view/tracking', 'trackController@show')->name('viewTracking');
 Route::any('/search/tracking','trackController@search')->name('searchTrack');
 
 
+//Create print function
+Route::get('/customer/print-pdf/{id}', 'bookController@custPrint')->name('customer.printpdf')->middleware('auth:customer');
+
+Route::get('/staff/print-pdf/{id}', 'bookController@staffPrint')->name('staff.printpdf')->middleware('auth:staff');
+
+
+

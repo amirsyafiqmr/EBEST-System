@@ -143,9 +143,9 @@
                                     <a class="btn btn-round btn-success" href="{{route('dateViewUpdate', $booking->book_id) }}" class="nav-link {{ (request()->is('update/date/*')) ? 'active show-sub' : '' }}" class="btn btn-round btn-success">
                                         Update
                                     </a>
-{{--                                    <a href=" " class="btn btn-round btn-primary">--}}
-{{--                                        Print--}}
-{{--                                    </a>--}}
+                                    <a href="{{route('staff.printpdf', $booking->book_id) }}" class="nav-link {{ (request()->is('/staff/print-pdf/*')) ? 'active show-sub' : '' }} btn btn-round btn-primary">
+                                        Print
+                                    </a>
                                     </center>
                             </div>
                         </div>
